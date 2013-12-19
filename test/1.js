@@ -322,6 +322,7 @@ botMethods.djAdvanceEvent = function(data){
                     case "whoami":
                         if(API.getUser(fromID).permission > 1 || Countrybot.admins.indexOf(fromID) > -1 || API.getUser(fromID).permission < 2){
                             API.sendChat("Username: "+ data.from +" ID: "+ data.fromID);
+                            API.sendChat("You're good enough, you're smart enough, and gosh darnit people like you!");
                             Countrybot.misc.ready = false;
                             setTimeout(function(){ Countrybot.misc.ready = true; }, Countrybot.settings.cooldown * 1000);
                         }
